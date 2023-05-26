@@ -47,7 +47,7 @@ public class CommunicationThread extends Thread {
 
             // Read the numbers and operationType values sent by the client
             String message = bufferedReader.readLine();
-            if (message.isEmpty()) {
+            if (message == null || message.isEmpty()) {
                 Log.e(Constants.TAG, "[COMMUNICATION THREAD] Error receiving parameters from client (numbers / operation type!");
                 return;
             }
